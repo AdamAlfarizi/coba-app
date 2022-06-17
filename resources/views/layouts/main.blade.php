@@ -35,14 +35,10 @@
                 @yield('container')
             </section>
         </div>
-        <footer class="py-5 bg-dark align-down">
-            <div class="container">
-                <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
-            </div>
-        </footer>
+        @include('partials.footer')
 
         <script src="{{ asset('/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
         <script src="{{ asset('/vendors/apexcharts/apexcharts.js') }}"></script>
         <script src="{{ asset('/js/pages/dashboard.js') }}"></script>
