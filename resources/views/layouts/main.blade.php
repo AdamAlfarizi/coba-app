@@ -29,7 +29,6 @@
 <body>
     @include('partials.navbar')
     <div class="bg-light">
-        <h3>@yield('title')</h3>
         <div class="page-content">
             <section>
                 @yield('container')

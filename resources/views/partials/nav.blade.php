@@ -8,7 +8,7 @@
             @if (request('author'))
                 <input type="hidden" name="author" value="{{ request('author') }}">
             @endif
-            <div class="card-header">Search</div>
+            <div class="card-header mb-4">Search</div>
             <div class="card-body">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search..." name="search"
@@ -21,7 +21,7 @@
 
 
 <div class="card mb-4">
-    <div class="card-header">Categories</div>
+    <div class="card-header mb-4">Categories</div>
     <div class="card-body">
         @if (session()->has('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -47,8 +47,8 @@
             <form action="/login_layanan" method="post">
                 @csrf
                 <div class="form-group position-relative has-icon-left mb-4">
-                    <input type="integer" name="nik" class="form-control form-control-xl" id="nik" placeholder="Nik"
-                        required>
+                    <input type="integer" name="nik" class="form-control form-control-xl" id="nik"
+                        placeholder="Nik" required>
                     <div class="form-control-icon">
                         <i class="bi bi-shield-lock"></i>
                     </div>
@@ -74,7 +74,7 @@
 
 <!-- Categories widget-->
 <div class="card mb-4">
-    <div class="card-header">Categories</div>
+    <div class="card-header mb-4">Categories</div>
     <div class="card-body">
         <div class="row">
             <div class="col-sm-6">

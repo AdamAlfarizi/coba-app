@@ -545,7 +545,7 @@
 }
 
 .form-group {
-    margin-bottom: .7rem
+    margin-bottom: 2rem !important
 }
 
 .form-group label {
@@ -1217,7 +1217,7 @@
 
 .layout-horizontal .main-navbar ul {
     display: flex;
-    gap: 2rem;
+    gap: 3.5rem;
     list-style: none;
     margin-bottom: 0;
     padding: 0

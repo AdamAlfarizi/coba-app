@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="mb-10">
             <h4>Berita Desa</h4>
-            <hr size="10px" width="130px">
+            <hr size="20px" width="130px">
         </div>
         <div class="row">
             <!-- Blog entries-->
@@ -45,7 +45,6 @@
                         </div>
                 </div>
                 <!-- Nested row for non-featured blog posts-->
-
                 <div class="row">
                     @foreach ($posts->skip(1) as $post)
                         <div class="col-lg-6">
@@ -79,31 +78,35 @@
                         </div>
                     @endforeach
                 </div>
+                <div class="d-flex justify-content-center">
+                    {{ $posts->links() }}
+                </div>
             </div>
             <!-- Side widgets-->
             @include('partials.nav')
-
         </div>
     </div>
-    <div class="d-flex justify-content-center">
-        {{ $posts->links() }}
-    </div>
 
-    <div class="row">
-        @foreach ($categories as $category)
-            <div class="col-md-4">
-                <a href="/posts?category={{ $category->slug }}">
-                    <div class="card bg-dark text-white">
-                        <img src="https://source.unsplash.com/500x400?{{ $category->name }}" class="card-img"
-                            alt="{{ $category->name }}">
-                        <div class="card-img-overlay d-flex align-items-center p-0 fs-3">
-                            <h5 class="card-title text-center flex-fill p-4" style="background-color: rgba(0, 0, 0,0.7)">
-                                {{ $category->name }}</h5>
+
+    <!-- Potensi Desa Tanjungkarang -->
+    <div class="container-fluid">
+        <div class="row">
+            @foreach ($categories as $category)
+                <div class="col-md-4">
+                    <a href="/posts?category={{ $category->slug }}">
+                        <div class="card bg-dark text-white">
+                            <img src="https://source.unsplash.com/300x200?{{ $category->name }}" class="card-img"
+                                alt="{{ $category->name }}">
+                            <div class="card-img-overlay d-flex align-items-center p-0 fs-3">
+                                <h5 class="card-title text-center flex-fill p-4"
+                                    style="background-color: rgba(0, 0, 0,0.7)">
+                                    {{ $category->name }}</h5>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        @endforeach
+                    </a>
+                </div>
+            @endforeach
+        </div>
     </div>
 @else
     <p class="text-center fs-4">No berita found</p>
